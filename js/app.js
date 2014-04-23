@@ -30,7 +30,7 @@ newGame = function(){
 };//reload entire page to start new game when "new game" clicked
 
 guess = function(){
-      var g = ("#userGuess").val();
+      var g = $("#userGuess").val();
     	$(".button").click(function(){
     	$("#guessList").append("<li>" + g + "</li>");
     	$("#feedback").text(feedback);
@@ -40,7 +40,7 @@ guess = function(){
 };//allows user guess to be logged
 
 feedback = function(){
-   var g = ("#userGuess").val();
+   var g = $("#userGuess").val();
    if(g == secretNum) {
    	return("Correct!!"); 
    } else if(g >= 10 + secretNum) {
