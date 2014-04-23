@@ -30,21 +30,22 @@ newGame = function(){
 };//reload entire page to start new game when "new game" clicked
 
 guess = function(){
+      var g = ("#userGuess").val();
     	$(".button").click(function(){
-    	$("#guessList").append("<li>" + $("#userGuess").val() + "</li>");
+    	$("#guessList").append("<li>" + g + "</li>");
     	$("#feedback").text(feedback);
     	$("#count").text(feedback);
     	$('#userGuess').val('');
     })
 };//allows user guess to be logged
 
-//var g = ("#userGuess").val();
-
 feedback = function(){
-   if(guess <= 10 + secretNum) {
-   	return("Hot!!");
-   } else(guess >= 10 + secretNum)
-   	return("Cold!!");
+   if(g == secretNum) {
+   	return("Correct!!"); 
+   } else(g >= 10 + secretNum) {
+   	return("Cold!!"); 
+   } else (guess <= 10 + secretNum) 
+    return("Hot!!");
    
 }; //gives user feedback on guess
 	
