@@ -41,9 +41,9 @@ guess = function(){
 //var g = ("#userGuess").val();
 
 feedback = function(){
-   if(guess = 10 + secretNum) {
+   if(guess <= 10 + secretNum) {
    	return("Hot!!");
-   } else(guess != 10 + secretNum)
+   } else(guess >= 10 + secretNum)
    	return("Cold!!");
    
 }; //gives user feedback on guess
