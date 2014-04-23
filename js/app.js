@@ -43,7 +43,7 @@ feedback = function(){
    var g = ("#userGuess").val();
    if(g == secretNum) {
    	return("Correct!!"); 
-   } else(g >= 10 + secretNum) {
+   } else if(g >= 10 + secretNum) {
    	return("Cold!!"); 
    } else (guess <= 10 + secretNum) 
     return("Hot!!");
