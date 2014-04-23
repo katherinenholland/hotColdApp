@@ -40,6 +40,7 @@ guess = function(){
 };//allows user guess to be logged
 
 feedback = function(){
+   var g = ("#userGuess").val();
    if(g == secretNum) {
    	return("Correct!!"); 
    } else(g >= 10 + secretNum) {
