@@ -42,9 +42,9 @@ guess = function(){
 
 feedback = function(){
    if(guess = 10 + secretNum) {
-   	text.("Hot!!");
+   	return("Hot!!");
    } else(guess != 10 + secretNum)
-   	text.("Cold!!");
+   	return("Cold!!");
    
 }; //gives user feedback on guess
 	
