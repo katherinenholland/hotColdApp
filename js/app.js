@@ -1,8 +1,12 @@
-$(document).ready(function(){
+$(document).ready(function(){  
     secretNum;
     alert(secretNum);
     guess();
-});	
+    feedback();
+    newGame();
+});	//end of document ready
+
+
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
     	$(".overlay").fadeIn(1000);
@@ -19,30 +23,30 @@ $(document).ready(function(){
 var secretNum = 1 + Math.floor(Math.random() * 100); //when new game starts, a secret # from 1-100 is generated
 
 
-//reset = function(){
-	//$(".new").click(function(){
-     // location.reload();
-	//})
-//}//reload entire page to start new game when "new game" clicked
+newGame = function(){
+	$(".new").click(function(){
+     location.reload();
+	})
+};//reload entire page to start new game when "new game" clicked
 
 guess = function(){
     	$(".button").click(function(){
     	$("#guessList").append("<li>" + $("#userGuess").val() + "</li>");
-    	$("#feedback").write(feedback);
-    	$("#count").write(feedback);
+    	$("#feedback").text(feedback);
+    	$("#count").text(feedback);
     	$('#userGuess').val('');
     })
-};
+};//allows user guess to be logged
 
-var g = ("#userGuess").val();
+//var g = ("#userGuess").val();
 
 feedback = function(){
-   if(g == 10 + secretNum){
-   	write("Hot!!");
-   } else(g !== 10 + secretNum)
-   	write("Cold!!");
+   if(guess = 10 + secretNum) {
+   	text.("Hot!!");
+   } else(guess != 10 + secretNum)
+   	text.("Cold!!");
    
-};
+}; //gives user feedback on guess
 	
 
 //var x = $("#userGuess").val();
