@@ -4,7 +4,8 @@ $(document).ready(function() {
     feedback();
     guess();
     $('#userGuess').val('');
-    //newGame();
+
+    newGame();
 
 }); //end of document ready 
 
@@ -27,15 +28,19 @@ var secretNum = 1 + Math.floor(Math.random() * 100); //when new game starts, a s
 
 
 guess = function(){
-      //var g = $("#userGuess").val();
+      var g = $("#userGuess").val();
+      $("form").submit(function(event){
+          event.preventDefault();
+        });  
     	$(".button").click(function() {
-    	 $("#guessList").append("<li>" + $("#userGuess").val() + "</li>");
+    	 $("#guessList").append("<li>" + g + "</li>");
         $("#guessList").append(feedback);
     	   $("#feedback").append(feedback);
     	   var counter = $("#feedback").val();
           counter++;
         $("#count").val(counter);
     })
+     
 };//allows user guess to be logged
 
 
