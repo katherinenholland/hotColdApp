@@ -59,7 +59,7 @@ feedback = function(){
       return("Warm...")
     } else if(g >= 10 + secretNum) {
    	  return("Hot!");  
-    } else (g  < 10 + secretNum) 
+    } else (g <= 9 + secretNum) 
       return("Very Hot!!");
    
 }; //gives user feedback on guess and checks to make sure a whole number 1-100
