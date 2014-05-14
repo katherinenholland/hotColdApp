@@ -49,19 +49,19 @@ feedback = function(){
    var g = $("#userGuess").val();
    if(g == secretNum) {
    	  return("Correct!!");
-    } else if (g % 1 != 0  && g <= 100 && g >= 1) {
-      return("Your guess must be a whole number between 1-100!")
-    } else if (g >= 50 + secretNum) {
-      return("Ice Cold...Brrrrr.")
-    } else if (g >= 30 + secretNum) {
-      return("Cold...")
-    } else if (g >= 20 + secretNum) {
-      return("Warm...")
-    } else if(g >= 10 + secretNum) {
-   	  return("Hot!");  
-    } else (g <= 9 + secretNum) 
-      return("Very Hot!!");
-   
+    } else if (g % 1 != 0  || g <= 100 || g >= 1) {
+      return("Your guess must be a whole number between 1-100!");
+    }else if(g-secretNum >= 50); {
+      return("Ice Cold....Brrrr.")
+    }else if (g-secretNum >=30 || g-secretNum < 50) {
+      return("Cold...");
+    } else if (g-secretNum >=20 || g-secretNum <30) {
+      return("Warm....");
+    } else if (g-secretNum >= 10 || g-secretNum < 20) {
+      return("HOT!!!");
+    } else (g-secretNum < 10)
+      return("Very HOT!!!!");
+
 }; //gives user feedback on guess and checks to make sure a whole number 1-100
 
 
