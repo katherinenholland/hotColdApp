@@ -3,8 +3,8 @@ $(document).ready(function() {
     //alert(secretNum);
     feedback();
     guess();
-    clicks;
-    newGame();
+    /*clicks;*/
+    /*newGame();*/
 
 }); //end of document ready 
 
@@ -48,19 +48,19 @@ guess = function(){
 feedback = function() {
    var g = $("#userGuess").val();
    if(g == secretNum) {
-   	  return("Correct!!");
+   	  return "Correct!!";
     } else if (g % 1 != 0  || g <= 100 || g >= 1) {
-      return("Your guess must be a whole number between 1-100!");
+      return"Your guess must be a whole number between 1-100!";
     } else if(g-secretNum >= 50) {
-      return("Ice Cold....Brrrr.");
+      return"Ice Cold....Brrrr.";
     } else if(g-secretNum >=30 && g-secretNum < 50) {
-      return("Cold...");
+      return"Cold...";
     } else if (g-secretNum >=20 && g-secretNum < 30) {
-      return("Warm....");
+      return"Warm....";
     } else if (g-secretNum >= 10 && g-secretNum < 20) {
-      return("HOT!!!");
+      return"HOT!!!";
     } else (g-secretNum < 10)
-      return("Very HOT!!!!");
+      return"Very HOT!!!!";
 
 }; //gives user feedback on guess and checks to make sure a whole number 1-100
 
