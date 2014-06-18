@@ -3,8 +3,7 @@ $(document).ready(function() {
     //alert(secretNum);
     feedback();
     guess();
-    /*clicks;*/
-    /*newGame();*/
+    
 
 }); //end of document ready 
 
