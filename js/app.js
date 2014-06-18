@@ -46,10 +46,10 @@ guess = function(){
 
 
 feedback = function() {
-   var g = $("#userGuess").val();
+   var g = parseFloat($("#userGuess").val());
    if(g == secretNum) {
    	  return "Correct!!";
-    } else if (g % 1 != 0  || g <= 100 || g >= 1) {
+    } else if (g % 1 != 0  || g > 100 || g < 1) {
       return"Your guess must be a whole number between 1-100!";
     } else if(g-secretNum >= 50) {
       return"Ice Cold....Brrrr.";
