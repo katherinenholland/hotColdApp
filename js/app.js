@@ -51,7 +51,7 @@ feedback = function() {
    	  return("Correct!!");
     } else if (g % 1 != 0  || g <= 100 || g >= 1) {
       return("Your guess must be a whole number between 1-100!");
-    } else if(g-secretNum >= 50); {
+    } else if(g-secretNum >= 50) {
       return("Ice Cold....Brrrr.");
     } else if(g-secretNum >=30 && g-secretNum < 50) {
       return("Cold...");
